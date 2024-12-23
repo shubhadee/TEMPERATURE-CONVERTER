@@ -1,6 +1,6 @@
 # TEMPERATURE-CONVERTER  
 
-**Author**: Shubhadeep Subal Devnath  
+**Name**: Shubhadeep Subal Devnath  
 **Company**: CODTECH IT SOLUTIONS  
 **ID**: CT08EVR  
 **Domain**: C++ Programming  
