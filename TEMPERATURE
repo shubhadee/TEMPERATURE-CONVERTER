@@ -1,0 +1,54 @@
+#include <iostream>
+using namespace std;
+
+void convertTemperature(double temp, char from, char to) {
+    double converted;
+
+    switch (from) {
+        case 'C':
+            switch (to) {
+                case 'F': converted = (temp * 9 / 5) + 32; break;
+                case 'K': converted = temp + 273.15; break;
+                default: cout << "Invalid target scale.\n"; return;
+            }
+            break;
+
+        case 'F':
+            switch (to) {
+                case 'C': converted = (temp - 32) * 5 / 9; break;
+                case 'K': converted = (temp - 32) * 5 / 9 + 273.15; break;
+                default: cout << "Invalid target scale.\n"; return;
+            }
+            break;
+
+        case 'K':
+            switch (to) {
+                case 'C': converted = temp - 273.15; break;
+                case 'F': converted = (temp - 273.15) * 9 / 5 + 32; break;
+                default: cout << "Invalid target scale.\n"; return;
+            }
+            break;
+
+        default:
+            cout << "Invalid input scale.\n";
+            return;
+    }
+
+    cout << "Converted Temperature: " << converted << " " << to << endl;
+}
+
+int main() {
+    double temperature;
+    char fromScale, toScale;
+
+    cout << "Enter the temperature value: ";
+    cin >> temperature;
+    cout << "Enter the current scale(C for Celsius, F for Fahrenheit, K for Kelvin): ";
+    cin >> fromScale;
+    cout << "Enter the target scale(C for Celsius, F for Fahrenheit, K for Kelvin): ";
+    cin >> toScale;
+
+    convertTemperature(temperature, toupper(fromScale), toupper(toScale));
+
+    return 0;
+}
