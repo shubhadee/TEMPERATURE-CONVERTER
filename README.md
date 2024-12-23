@@ -29,4 +29,6 @@ The **TEMPERATURE-CONVERTER** project is a console-based C++ application designe
 2. Based on the input, the program performs the necessary calculation.  
 3. The result is displayed, showing the converted temperature in the target scale.  
 
+![image](https://github.com/user-attachments/assets/7e7f739f-cf9e-45ac-b939-9779ed5351e4)
+
  
